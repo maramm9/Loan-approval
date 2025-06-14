@@ -1,0 +1,1 @@
+df['Credit_History'].fillna(df['Credit_History'].mode()[0], inplace=True)

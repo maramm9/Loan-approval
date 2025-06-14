@@ -1,0 +1,1 @@
+df['LoanAmount'].fillna(df['LoanAmount'].median(), inplace=True)
