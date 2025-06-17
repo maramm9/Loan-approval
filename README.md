@@ -1,6 +1,8 @@
-# Loan Prediction – Data Preparation
+# Loan Prediction – Data cleaning and preprocessing
+## name:
+albatoul_284575_c2
 
-## Part: Data Cleaning and Feature Engineering
+### Data Cleaning and Feature Engineering
 
 My section of the project focuse on preparing the loan dataset for machine learning modeling.
 For a detailed explanation of the data issue and handling process, please see the Word document.
