@@ -35,4 +35,4 @@ Based on the cleaned and engineered dataset, the following classification models
 - **Decision Tree** – makes decisions step by step, like a flowchart
 - **Random Forest** –  gives better results by using many decision trees together
 
-To evaluate these models properly, cross-validation should be applied in the modeling step  for more reliability to ensure results are stable and not dependent on a single train-test split but the decission for .
+To evaluate these models properly, cross-validation should be applied in the modeling step  for more reliability to ensure results are stable and not dependent on a single train-test split but the final decission for the training team .
