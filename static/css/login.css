@@ -6,7 +6,7 @@ body{
 h1.welcome{
     text-align: center;
     font-size: 10vw;
-    color: rgb(31, 37, 41);
+    color: rgb(41, 31, 39);
     font-family: initial;
     text-transform: uppercase;
 }
@@ -178,4 +178,20 @@ a.google span{
         padding: 20px 10px;
     }
     
+}
+.alert {
+    margin: 20px auto;
+    max-width: 500px;
+}
+.welcome {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.forms {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.forgot-pass {
+    font-size: 0.9rem;
+    color: #6c757d;
 }
