@@ -145,6 +145,10 @@ def metrics_page():
     report = get_model_metrics()
     return render_template("metrics.html", report=report)
 
+@app.route('/eda')
+def eda():
+    return render_template('eda.html')
+
 
 
 if __name__ == "__main__":
