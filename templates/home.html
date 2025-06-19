@@ -21,8 +21,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('manage_request') }}">Manage Requests</a></li>
-                    <li class="nav-item"><a class="nav-link" href="eda.html">Exploratory Analysis</a></li>
-                    <li class="nav-item"><a class="nav-link" href="date_issue.html">Date Issue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('eda') }}">Exploratory Analysis</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('metrics_page') }}">Model Metrics</a></li>
                 </ul>
                 {% if 'email' in session %}
@@ -69,7 +68,7 @@
                         <div class="feature-icon">🔍</div>
                         <h3>Data Analysis</h3>
                         <p>Explore detailed analytics and visualizations of your loan application data.</p>
-                        <a href="eda.html" class="btn btn-primary mt-3">Explore Data</a>
+                        <a href="{{ url_for('eda') }}" class=" btn-primary mt-3">Explore Data</a>
                     </div>
                 </div>
             </div>
