@@ -108,6 +108,29 @@ h2, h3 {
     font-size: 14px;
 }
 
+/* Delete button styling */
+.delete-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Status colors */
+.status-approved {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #dc3545;
+    font-weight: bold;
+}
+
 @media (max-width: 992px) {
     .main-container {
         flex-direction: column;
