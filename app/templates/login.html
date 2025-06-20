@@ -10,7 +10,6 @@
     
 </head>
 <body>
-    <!-- Flash messages section -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             <div class="container mt-3">
@@ -23,19 +22,17 @@
             </div>
         {% endif %}
     {% endwith %}
-
     <div class="container mt-4 text-center">
         <h1 class="welcome">Welcome</h1>
         <img src="{{ url_for('static', filename='images/bank.jpg') }}" 
              class="rounded mx-auto d-block" height="150" width="200" alt="bank" />
     </div>
-
     <section class="container forms mt-3">
         <!-- Login Form -->
         <div class="form login">
             <div class="form-content">
                 <header>Login</header>
-                <form action="{{ url_for('login') }}" method="POST">
+                <form action="{{ url_for('main.login') }}" method="POST">
                     <div class="mb-3">
                         <input type="email" name="email" placeholder="Email" class="form-control" required />
                     </div>
@@ -53,7 +50,7 @@
                     </div>
                 </form>
                 <div class="form-link text-center">
-                    <span>Don't have an account? <a href="{{ url_for('signup') }}">Signup</a></span>
+                    <span>Don't have an account? <a href="{{ url_for('main.signup') }}">Signup</a></span>
                 </div>
             </div>
         </div>
