@@ -1,0 +1,1 @@
+data['Application_Age_Days'] = (today - data['Loan_Application_Date']).dt.days
