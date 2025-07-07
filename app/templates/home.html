@@ -9,7 +9,66 @@
 
 </head>
 <body>
-    {% include 'header.html' %} 
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ url_for('main.home') }}">
+      <img
+        src="{{ url_for('static', filename='images/bank.jpg') }}"
+        height="50"
+        width="50"
+        alt="شعار البنك"
+        class="d-inline-block align-top rounded">
+    </a>
+
+    <!-- زر التبديل - تم إصلاح مشكلة النص الوصفي -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-expanded="false"
+      aria-label="تبديل القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('main.home') }}">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.manage_request') }}">إدارة الطلبات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.eda') }}">التحليل الاستكشافي</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.metrics_page') }}">مقاييس النموذج</a>
+        </li>
+      </ul>
+
+      {% if 'email' in session %}
+      <div class="d-flex">
+        <span class="navbar-text me-3">
+          مرحبًا، {{ session.get('email', 'مستخدم') }}
+        </span>
+        <a href="{{ url_for('main.logout') }}" class="btn btn-outline-light">
+          تسجيل الخروج
+        </a>
+      </div>
+      {% else %}
+      <div class="d-flex">
+        <a href="{{ url_for('main.login') }}" class="btn btn-outline-light me-2">
+          تسجيل الدخول
+        </a>
+        <a href="{{ url_for('main.signup') }}" class="btn btn-primary">
+          إنشاء حساب
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>
     <div class="container">
         <div class="hero-section text-center">
             <h1 class="display-4 fw-bold">Bank Loan Approval System</h1>
