@@ -1,0 +1,15 @@
+// تأكد من وجود هذه الحقول الأساسية
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "your-build-command", // ⚠️ تأكد من صحة الأمر
+    "start": "your-start-command"
+  },
+  "dependencies": {
+    "critical-package": "^1.0.0" // ⚠️ تأكد من وجود التبعيات الأساسية
+  },
+  "engines": {
+    "node": "18.x" // ⚠️ تحديد نسخة Node.js
+  }
+}
