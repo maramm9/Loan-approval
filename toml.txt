@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# لاستدعاء API دون مشاكل CORS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"
+
+# إعادة توجيه لتدفق الصفحات في تطبيقات SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
